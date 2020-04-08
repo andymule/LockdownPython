@@ -32,4 +32,4 @@ a = 'hello world'
 b = '☃'          # snowman
 c = 'घङचछज'     # sanskrit
 
-print("\n\t" + b*5) # print new line, a tab, and the string c 4 times
+print("\n\t" + b*5) # print new line, a tab, and the string b 4 times
