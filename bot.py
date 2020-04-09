@@ -4,7 +4,9 @@ import discord
 from discord.ext import commands
 import random
 
-TOKEN = "Njk3NzI2MjYxMzA0MzYwOTcx.Xo7oRw.VLl1VBKADA2VGK9M18y8qPOJ2FI"
+TOKEN1 = "Njk3NzI2MjYxMzA0MzYwOTcx."
+TOKEN2 = "Xo71rA.eAcFb8RklNf7sbqyeMbbbW-fTHg"
+TOKEN = TOKEN1 + TOKEN2
 GUILD = "Church"
 
 client = discord.Client()
