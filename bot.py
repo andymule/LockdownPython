@@ -10,6 +10,8 @@ TOKEN = TOKEN1 + TOKEN2
 GUILD = "Church"
 
 client = discord.Client()
+
+
 # bot = commands.Bot(command_prefix='!')
 
 @client.event
@@ -31,7 +33,6 @@ async def on_message(message):
     if "him" in message.content:
         response = random.choice(brooklyn_99_quotes)
         await message.channel.send(response)
-
 
 # @client.event
 # async def on_member_join(member):
