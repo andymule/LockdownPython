@@ -11,28 +11,32 @@ charlist = [chr(int(random.random() * 26 + 64)) for _ in range(0, 1000)]  # list
 
 
 def howMany69(mylist):
-    # TODO write a function that returns the number of 69s in the input list
+    # TODO write a function that returns the number of 69s in the input mylist
     pass
 
 
 def whereIs69(mylist):
-    # TODO write a function that returns the first index of 69 in the input list
+    # TODO write a function that returns the first index of 69 in the input mylist
     pass
 
 
 def averageFirstHalfOfList(mylist):
-    # TODO write a function that averages the first half of the input list
+    # TODO write a function that averages the first half of the input mylist
     pass
 
 
 def countO(mylist):
-    # TODO write a function that averages the first half of the input list
+    # TODO write a function that counts the occurrences of the letter capital O
     pass
 
+def couldWeSpellPizzas(mylist):
+    # TODO write a function that determines if the letters P, I, Z, A, S exist in the input mylist
+    # TODO BONUS learn for yourself what characters are missing from this word 
+    pass
 
-# challenge! might take some googling
+# challenge! 
 def sortReverse10string(mylist):
-    # TODO write a function that sorts an input list, reverses it, keeps the first ten elements, and returns those in a string 
+    # TODO write a function that sorts an input mylist, reverses it, keeps the first ten elements, and returns those in a string 
     pass
 
 
@@ -43,6 +47,7 @@ try:
     assert (whereIs69(numlist) == 510), "whereIs69 is wrong!"
     assert (averageFirstHalfOfList(numlist) == 498.992), "averageFirstHalfOfList is wrong!"
     assert (countO(charlist) == 41), "countO is wrong!"
+    assert (couldWeSpellPizzas(charlist) == False), "couldWeSpellPizzas is wrong!"
     assert (sortReverse10string(charlist) == "YYYYYYYYYY"), "sortReverse10string is wrong!"
     print("YOU DID IT ALL NICELY WOW")
 except AssertionError:
