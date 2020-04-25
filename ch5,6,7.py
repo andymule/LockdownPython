@@ -20,6 +20,7 @@ def buildMap(w, h): # creates the map
     builtMap = " "
     for _ in range(w-2):
         builtMap += '-'
+    builtMap += " "
     for _ in range(h):
         builtMap += '\n'
         builtMap += '|'
@@ -29,9 +30,10 @@ def buildMap(w, h): # creates the map
     builtMap += '\n '
     for _ in range(w-2):
         builtMap += '-'
+    builtMap += " "
     return builtMap
 
-MAP = buildMap(mapwidth, mapheight)
+EMPTY_MAP = buildMap(mapwidth, mapheight)
 # # debug or print to see it, but by default this made a map like this:
 # MAP = """ ------------ 
 # |            |
@@ -46,7 +48,7 @@ MAP = buildMap(mapwidth, mapheight)
 ######### I define some functions we'll be calling often during our game #######
 # draws whatever you pass it into the preset map (which is really one big string)
 def drawThingAt(drawme, y, x, currentmap):
-    mypos = mapwidth*y + x  # convert y and x into a single counter from beginning of string
+    mypos = (mapwidth+1)*y + x  # convert y and x into a single counter from beginning of string
     # string can't be altered, so we convert our string to a list
     newmap = list(currentmap)
     newmap[mypos] = drawme  # and then we insert our thing into that list
@@ -54,7 +56,7 @@ def drawThingAt(drawme, y, x, currentmap):
     return "".join(newmap)
 
 
-def delay_print(s, sleeptime=0.05):  # prints char to screen w super cool delay, will need explicit new line to get one
+def delay_print(s, sleeptime=0.03):  # prints char to screen w super cool delay, will need explicit new line to get one
     for c in s:  # go through all of the characters in the string
         # write single char to screen, which normally wouldn't print until newline
         sys.stdout.write(c)
@@ -75,10 +77,10 @@ def delay_print(s, sleeptime=0.05):  # prints char to screen w super cool delay,
 os.system('cls' if os.name == 'nt' else 'clear')  # clears screen
 delay_print("RikiT♣ki G♠mes presents:\n")
 delay_print("Test 3 -- THE GAME")
-time.sleep(1)
+time.sleep(.5)
 while True:
     os.system('cls' if os.name == 'nt' else 'clear')  # clears screen
-    currentmap = drawThingAt(meSymbol, posYme, posXme, MAP)
+    currentmap = drawThingAt(meSymbol, posYme, posXme, EMPTY_MAP)
     print(currentmap)
     time.sleep(0.1)
     key = keyboard.read_key()
